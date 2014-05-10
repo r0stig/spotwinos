@@ -77,10 +77,12 @@ if __name__ == "__main__":
     if device == None:
         print "Couldn't find device with name {0}, terminating".format(device_name)
     else:
+        follow_id = config.get('General', 'follow_user_id')
         print "Found device {0}, using this as victim".format(device)
 
         stream = MyStreamer(config.get('General', 'api_key'), config.get('General', 'api_secret'),
                         config.get('General', 'access_token'), config.get('General', 'access_token_secret'))
         stream.set_device(device)
-        stream.statuses.filter(follow=config.get('General', 'follow_user_id'))
 
+        print "Stream starting.. following {0}".format(follow_id)
+        stream.statuses.filter(follow=follow_id)
