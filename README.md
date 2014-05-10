@@ -1,5 +1,7 @@
-**Spo**tify T**wi**tter So**nos**
+Spotwinos
 ==================================
+**Spo**tify T**wi**tter So**nos**
+
 Arguing what music to choose at the office? With this service you set up a twitter account (or using an existing one) which you send spotify track URIs to. The service will then add the tracks to the sonos queue.
 
 
