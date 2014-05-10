@@ -64,9 +64,11 @@ class MyStreamer(TwythonStreamer):
 
 def find_device(name):
     name = unicode(name, 'utf-8')
-    for zone in soco.discover():
-        if zone.player_name == name:
-            return zone
+    filter(lambda zn: zn.player_name == name, soco.discover())
+
+    #for zone in soco.discover():
+    #    if zone.player_name == name:
+    #        return zone
 
 if __name__ == "__main__":
     config = ConfigParser.ConfigParser()
